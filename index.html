@@ -2,46 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Neal</title>
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(circle at 30% 20%, #a3c4ff, #0b1020 80%);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #e6eefc;
+    :root{
+      /* Accent family (same vibe as the old N) */
+      --blue-light: #d7e6ff;
+      --blue-accent: #5da0ff; /* reference blue */
+      --blue-dark: #0e2b5e;
     }
-    .card {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 32px;
-      padding: 60px 80px;
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(6px);
+    html,body{
+      height:100%;
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     }
-    .logo {
-      font-size: 48px;
-      font-weight: 700;
-      color: #5da0ff;
-      margin-bottom: 15px;
+    body{
+      /* smooth light → dark blue gradient */
+      background: radial-gradient(1200px 700px at 30% 20%, var(--blue-light), transparent 55%),
+                  radial-gradient(900px 600px at 80% 10%, rgba(93,160,255,.35), transparent 60%),
+                  linear-gradient(160deg, var(--blue-light) 0%, var(--blue-accent) 45%, var(--blue-dark) 100%);
+      color:#ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:24px;
     }
-    h1 {
-      font-size: 28px;
-      color: #fff;
-      margin: 0;
+    h1{
+      margin:0;
+      font-size:clamp(28px,4vw,42px);
+      font-weight:800;
+      text-shadow:0 2px 14px rgba(0,0,0,.25);
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="logo">N</div>
-    <h1>Welcome to Neal's page</h1>
-  </div>
+  <h1>Welcome to Neal’s page</h1>
 </body>
 </html>
+
 
